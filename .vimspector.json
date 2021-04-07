@@ -1,0 +1,16 @@
+{
+  "configurations": {
+    "lj: Launch": {
+      "adapter": "debugpy",
+      "configuration": {
+        "name": "lj: Launch",
+        "type": "python",
+        "request": "launch",
+        "stopOnEntry": true,
+        "console": "externalTerminal",
+        "debugOptions": [],
+        "program": "~/py_project/visual_map/draw.py"
+      }
+    }
+  }
+}
