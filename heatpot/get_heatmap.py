@@ -2,11 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import sys
 
-vegetables = ["cucumber", "tomato", "lettuce", "asparagus",
-              "potato", "wheat", "barley"]
-farmers = ["Farmer Joe", "Upland Bros.", "Smith Gardening",
-           "Agrifun", "Organiculture", "BioGoods Ltd.", "Cornylee Corp."]
-
 #sys.stdin = open("/home/antraume/costmap/build/costmap_data.txt", "r")
 sys.stdin = open("./gridmap1.txt","r")
 #ksys.stdin = open("/home/antraume/Python_study/heatpot/gridmap1.txt","r")
@@ -28,6 +23,6 @@ while True:
                 flag = True
     im = ax.imshow(np.array(data))
     plt.savefig("./map_show/{0}.jpg".format(i))
-    #plt.show()
+    plt.show()
     plt.close()
     i += 1

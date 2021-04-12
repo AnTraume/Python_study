@@ -8,11 +8,8 @@ import numpy as np
 posit_x = []
 posit_y = []
 ut_data = [[[] for _ in range(2)] for _ in range(4)]
-sys.stdin = open("./UT.txt", "r")
-ut_degree0 = 75  
-ut_degree1 = 30  
-ut_degree2 = -30  
-ut_degree3 = -75  
+sys.stdin = open("/home/antraume/py_project/visual_map/visualization/UT.txt", "r")
+ut_degree = [75,30,-30,-75]
 limit = 50
 
 
@@ -44,13 +41,11 @@ while True:
     x, y, q = map(float, posit.split(' '))
     ut_dis = list(map(int, ut_dis.split(' ')))
     posit_x.append(x), posit_y.append(y)
-    addData(ut_dis[0], ut_degree0, q, x, y, ut_data[0])
-    addData(ut_dis[1], ut_degree1, q, x, y, ut_data[1])
-    addData(ut_dis[2], ut_degree2, q, x, y, ut_data[2])
-    addData(ut_dis[3], ut_degree3, q, x, y, ut_data[3])
+    for i in range(4):
+        addData(ut_dis[i], ut_degree[i], q, x, y, ut_data[i])
 
 #sys.stdin = open("/home/antraume/UT/UT.txt", "r")
-sys.stdin = open("./pose.txt", "r")
+#sys.stdin = open("/home/antraume/py_project/visual_map/visualization/pose.txt", "r")
 # foot_x = []
 # foot_y = []
 # while True:
